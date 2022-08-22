@@ -1,19 +1,16 @@
 
 const Navbar = () => {
-    <div>
-        <h1> Navbar</h1>
-    </div>
-    
-    //  <header id="header">
-    //     <nav className="menu">
-    //         <ul class="nav-menu">
-    //             <li><a className="active" href="index.html">Home</a></li>
-    //             <li><a href="pages/tienda.html">Tienda</a></li>
-    //             <li><a href="pages/iniciarsesion.html">Iniciar Sesion</a></li>
-    //             <li><a href="pages/registrarse.html">Registrarse</a></li>
-    //         </ul>
-    //     </nav>
-    //  </header>
+
+     <header id="header">
+        <nav className="menu">
+            <ul class="nav-menu">
+                <li><a className="active" href="index.html">Home</a></li>
+                <li><a href="pages/tienda.html">Tienda</a></li>
+                <li><a href="pages/iniciarsesion.html">Iniciar Sesion</a></li>
+                <li><a href="pages/registrarse.html">Registrarse</a></li>
+            </ul>
+        </nav>
+     </header>
 
 } 
 
