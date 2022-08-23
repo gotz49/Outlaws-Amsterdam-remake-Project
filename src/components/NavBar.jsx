@@ -1,20 +1,30 @@
+import CartWidget from "./CartWidget";
 
 const Navbar = () => {
-    return (
-    <header id="header">
-    <nav className="menu">
-        <ul class="nav-menu">
-            <li><a className="active" href="index.html">Home</a></li>
-            <li><a href="pages/tienda.html">Tienda</a></li>
-            <li><a href="pages/iniciarsesion.html">Iniciar Sesion</a></li>
-            <li><a href="pages/registrarse.html">Registrarse</a></li>
-        </ul>
-    </nav>
-    </header>
-    )
-     
+	return (
+		<header className="header">
+			<nav className="menu">
+				<ul className="nav-menu">
+					<li>
+						<a className="active" href="#">
+							Home
+						</a>
+					</li>
+					<li>
+						<a href="#">Tienda</a>
+					</li>
+					<li>
+						<a href="#">Iniciar Sesion</a>
+					</li>
+					<li>
+						<a href="#">Registrarse</a>
+					</li>
+				</ul>
 
-} 
-
+				<CartWidget />
+			</nav>
+		</header>
+	);
+};
 
 export default Navbar;
