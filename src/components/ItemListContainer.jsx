@@ -1,14 +1,18 @@
+import Item from "./Item";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+import Container from "react-bootstrap/Container";
 
-const ItemListContainer= (props) => {
-     return (
-          <article className="ListContainer">
-               <h2>{props.greeting}</h2>
-               <h3>{props.text}</h3>
-               <div>
-                    <p>Soy un prop : {props.relleno}: Fin del prop</p>
-               </div>
-          </article>
-     )
-}
+const ItemListContainer = (props) => {
+  return (
+    <div className="ItemListContainer">
+      <Container>
+        <Row>
+          <Item />
+        </Row>
+      </Container>
+    </div>
+  );
+};
 
 export default ItemListContainer;

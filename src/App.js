@@ -1,13 +1,13 @@
 import "./App.css";
-import Navbar from "./components/NavBar";
 import ItemListContainer from "./components/ItemListContainer";
+import BasicExample from "./components/NavBar";
 
 const App = () => {
 	return (
 		<>
-			<Navbar />
+			<BasicExample />
 			
-			<ItemListContainer greeting='Bienvenido' text='Lorem ipsum dolor sit amet. Id amet iusto aut delenit' relleno='relleno del prop'/>
+			<ItemListContainer />
 		</>
 	);
 };
