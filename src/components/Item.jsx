@@ -26,7 +26,7 @@ const Item = () => {
     <>
       {products.map((item) => (
 
-          <Card bg="dark" border="dark" style={{ width: "18rem" }}>
+          <Card bg="black" border="dark" style={{ width: "18rem" }}>
           <Card.Img variant="top" src={item.image} />
           <Card.Body className="productBody">
             <Card.Title className="productTitle">{item.name}</Card.Title>
