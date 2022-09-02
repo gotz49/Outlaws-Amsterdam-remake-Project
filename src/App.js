@@ -1,12 +1,14 @@
 import "./App.css";
 import ItemListContainer from "./components/ItemListContainer";
-import BasicExample from "./components/NavBar";
+import MiNavbar from "./components/NavBar";
+// import ItemDetailContainer from "./components/ItemDetailContainer";
 
 const App = () => {
 	return (
 		<>
-			<BasicExample />
+			<MiNavbar />
 			
+			{/* <ItemDetailContainer/> */}
 			<ItemListContainer />
 		</>
 	);

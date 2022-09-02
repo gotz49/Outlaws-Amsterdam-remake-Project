@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 
-function miNavbar() {
+function MiNavbar() {
   return (
     <Navbar variant="dark" expand="lg" className="miNavbar">
       <Container>
@@ -12,6 +12,7 @@ function miNavbar() {
             src="https://cdn.shopify.com/s/files/1/0519/1516/1756/files/outlaws_logo_tumbnail_125x.png?v=1610347053"
             width={125}
             height={51}
+            alt="#"
           ></img>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -22,7 +23,7 @@ function miNavbar() {
           </Nav>
         </Navbar.Collapse>
         </Container>
-	  <Nav>
+	      <Nav>
           <Nav.Link href="#shoppingCart">
             <CartWidget />
           </Nav.Link>
@@ -31,31 +32,4 @@ function miNavbar() {
   );
 }
 
-const dadsa = () => {
-  return (
-    <header className="header">
-      <nav className="menu">
-        <ul className="nav-menu">
-          <li>
-            <p className="active" href="#">
-              Home
-            </p>
-          </li>
-          <li>
-            <p href="ejemplo">Tienda</p>
-          </li>
-          <li>
-            <p href="ejemplo">Iniciar Sesion</p>
-          </li>
-          <li>
-            <p href="ejemplo">Registrarse</p>
-          </li>
-        </ul>
-
-        <CartWidget />
-      </nav>
-    </header>
-  );
-};
-
-export default miNavbar;
+export default MiNavbar;

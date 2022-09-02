@@ -140,3 +140,10 @@
   justify-content: center;
   margin-top: 10px;
 }
+
+.loading {
+  color: #bababa;
+  font-family: Gentium Basic;
+  font-size: 20px;
+  margin: 10px;
+}
