@@ -1,3 +1,9 @@
+*{
+  box-sizing: border-box !important;
+  margin: 0;
+  padding: 0;
+}
+
 .shoppingCart {
   display: flex;
   align-items: center;
@@ -49,7 +55,7 @@
   color: #bababa;
   display: inline;
   font-family: 'Gentium Basic';
-  font-size: 15px;
+  font-size: 16px;
   line-height: 24.75px;
   text-align: center;
 }
@@ -79,18 +85,14 @@
 
 }
 
-/* .card-body{
-  background-color: black !important;
-} */
-
 .price{
   margin: 15px;
   font-family: 'Montaga';
   font-size: 16px;
-  text-transform: uppercase;
   color: #bababa;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .quantity{
@@ -144,6 +146,45 @@
 .loading {
   color: #bababa;
   font-family: Gentium Basic;
-  font-size: 20px;
   margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detailContainer{
+  width: 98%;
+  margin: auto;
+}
+
+@media screen and (min-width:768px){
+  .detailContainer {
+    width: 70%;
+  }
+}
+
+.detail {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.detailImage {
+  width: 100%;
+}
+
+.content {
+  width: 100%;
+}
+
+@media screen and (min-width:768px){
+  .detailImage{
+    width: 50%;
+  }
+  .content {
+    padding-left: 3rem;
+    width: 50%;
+  }
 }

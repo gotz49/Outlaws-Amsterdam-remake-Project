@@ -13,7 +13,7 @@ const ItemDetailContainer = () => {
   }, []);
 
   return (
-    <GetItem item={product} />
+          <GetItem item={product} />
   )
 };
 
