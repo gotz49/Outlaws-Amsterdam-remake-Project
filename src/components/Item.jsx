@@ -1,28 +1,25 @@
 import Card from "react-bootstrap/Card";
-import ItemCount from "./ItemCount";
-
+// import ItemCount from "./ItemCount";
+import { Link } from "react-router-dom";
 /* ---------------------------- Comienzo del Item --------------------------- */
 
 const Item = ({ id, name, image, price, stock, description }) => {
-  /* -- Alerta al agregar items al carro -- */
-  const onAdd = (quantity) => {
-    alert("You have selected " + quantity + " items.");
-  };
 
   return (
     <>
-      <Card bg="black" border="dark" style={{ width: "18rem" }}>
-        <Card.Img variant="top" src={image} />
-        <Card.Body className="productBody">
-          <Card.Title className="productTitle">{name}</Card.Title>
-          {/* <Card.Text className="productDescription">{description}</Card.Text> */}
-          <div className="price">
-            <span>{price}</span>
-            {/* <span>stock: {stock}</span> */}
-          </div>
-          <ItemCount stock={stock} initial={0} onAdd={onAdd} />
-        </Card.Body>
-      </Card>
+        <Card bg="black" border="dark" style={{ width: "18rem" }}>
+          <Card.Img variant="top" src={image} />
+          <Card.Body className="productBody">
+            <Card.Title className="productTitle">{name}</Card.Title>
+            <div className="price">
+              {/* <span>{price}</span> */}
+              {/* <span>stock: {stock}</span> */}
+            </div>
+            <Link to={`/item/${id}`} style={{ textDecoration: "none"}}>
+                <button className="addButton"> Details </button>
+            </Link>
+          </Card.Body>
+        </Card>
     </>
   );
 };

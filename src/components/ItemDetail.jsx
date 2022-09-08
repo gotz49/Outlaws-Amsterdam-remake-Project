@@ -6,9 +6,7 @@ const onAdd = (quantity) => {
 };
 
 /* ---------------------------- Comienzo del ItemDetail --------------------------- */
-
 const GetItem = ({ item }) => {
-  console.log(item);
   return (
     <>
       {item.name ? (

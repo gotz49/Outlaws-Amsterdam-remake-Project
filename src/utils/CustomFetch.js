@@ -3,7 +3,7 @@ const CustomFetch = (task) => {
   return new Promise(resolve=> {
     setTimeout(() => {
       resolve(task)
-    }, 650)
+    }, 450)
   });
 };
 export default CustomFetch;

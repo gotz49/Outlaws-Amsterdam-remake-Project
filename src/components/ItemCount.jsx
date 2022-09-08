@@ -5,6 +5,7 @@ const ItemCount = ({ stock = 1, initial = 1, onAdd }) => {
 
   useEffect(() => {
     setCount(initial);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const increment = () => {
