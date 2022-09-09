@@ -28,6 +28,10 @@
   margin-bottom: 30px;
 }
 
+.ItemListContainer {
+  min-height: 550px;
+}
+
 /* card style */
 .addButton {
   display: flex;
@@ -188,3 +192,57 @@
     width: 50%;
   }
 }
+
+
+/* Footer */
+.footer {
+  width: 100%;
+  height: 15%;
+  max-height: 196px ; 
+  bottom: 0;
+}
+  .footer .linea {
+    width: 100%;
+    height: 1px;
+    background-color: #303030;
+    margin-bottom: 25px;
+    margin-top: 50px; }
+  .footer .volver {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    font-family: "Gentium Basic", serif;
+    font-size: 20px;
+    color: rgba(240, 248, 255, 0.842);
+    font-weight: 500; }
+    .footer .volver:hover {
+      color: rgba(138, 138, 138, 0.842);
+      transition: 0.25s; }
+  .footer .redes h3 {
+    margin: 10px;
+    text-align: center;
+    font-family: "Gentium Basic", serif;
+    font-size: 15px;
+    color: rgba(240, 248, 255, 0.842);
+    font-weight: 400; }
+  .footer .redes nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; }
+    .footer .redes nav ul li {
+      list-style: none;
+      margin-left: 15px;
+      margin-right: 15px; }
+  .derechos p {
+    text-align: center;
+    font-family: "Gentium Basic", serif;
+    font-size: 14px;
+    color: rgba(240, 248, 255, 0.842);
+    font-weight: 300;
+    margin: 5px; }
+
+
+/* end of footer */
