@@ -4,6 +4,7 @@ import ItemListContainer from "./components/ItemListContainer";
 import MiNavbar from "./components/NavBar";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import Footer from "./components/Footer";
+import Cart from "./components/Cart";
 
 const App = () => {
 	return (
