@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const ItemCount = ({ stock = 1, initial = 1, onAdd }) => {
+const ItemCount = ({ stock = 0, initial = 0, onAdd }) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -29,9 +29,11 @@ const ItemCount = ({ stock = 1, initial = 1, onAdd }) => {
       </div>
 
       <div className="buttonContainer">
-        <button onClick={() => onAdd(count)} className="addButton">
-          Add to Cart
-        </button>
+        {
+          stock && count
+          ? <button onClick={() => onAdd(count)} className="addBtn">Add to Cart</button>
+          : <button disabled className="addBtnDis">Add to Cart</button>
+        }
       </div>
     </div>
   );

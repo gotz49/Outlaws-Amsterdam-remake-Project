@@ -1,12 +1,29 @@
 import ItemCount from "./ItemCount";
 import Spinner from "react-bootstrap/Spinner";
-/* ------------------- onAdd function alert for Buy button ------------------ */
-const onAdd = (quantity) => {
-  alert("You have selected " + quantity + " items.");
-};
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";;
 
 /* ---------------------------- Comienzo del ItemDetail --------------------------- */
 const GetItem = ({ item }) => {
+  const [itemCount, setItemCount] = useState(0);
+
+  const onAdd = (qty) => {
+    toast.success("Agregaste " + qty + " items al carrito", {
+      theme: "dark",
+      position: "top-center",
+      autoClose: 2500,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+
+    setItemCount(qty);
+  };
+
   return (
     <>
       {item.name ? (
@@ -24,9 +41,32 @@ const GetItem = ({ item }) => {
                 <span>{item.price}</span>
                 <span>stock: {item.stock}</span>
               </div>
-              <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
+              <section className="AddCart">
+                {itemCount === 0 ? (
+                  <ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd} />
+                ) : (
+                  <Link
+                    to="/Cart"
+                    className="CheckoutBtn"
+                    style={{ textDecoration: "none" }}
+                  >
+                    Checkout
+                  </Link>
+                )}
+              </section>
             </div>
           </div>
+          <ToastContainer
+            position="top-center"
+            autoClose={2500}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+          />
         </div>
       ) : (
         <div className="loading">

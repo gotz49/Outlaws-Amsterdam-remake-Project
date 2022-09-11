@@ -16,7 +16,7 @@ const Item = ({ id, name, image, price, stock, description }) => {
               {/* <span>stock: {stock}</span> */}
             </div>
             <Link to={`/item/${id}`} style={{ textDecoration: "none"}}>
-                <button className="addButton"> Details </button>
+                <button className="addBtn"> Details </button>
             </Link>
           </Card.Body>
         </Card>

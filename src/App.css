@@ -33,7 +33,7 @@
 }
 
 /* card style */
-.addButton {
+.addBtn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,10 +49,25 @@
   border: 1.5px solid black;
 }
 
-.addButton:hover {
+.addBtn:hover {
   background-color: black;
   color: white;
   border: 1.5px solid white;
+}
+
+.addBtnDis{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #4d4d4d;
+  resize: none;
+  font-family: "Gentium Basic";
+  text-transform: uppercase;
+  border: 1.5px solid black;
 }
 
 .productDescription {
@@ -191,6 +206,30 @@
     padding-left: 3rem;
     width: 50%;
   }
+}
+
+.CheckoutBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  height: 40px;
+  width: auto;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  color: #000000;
+  background-color: #fec400;
+  resize: none;
+  font-family: "Gentium Basic";
+  text-transform: uppercase;
+  border: 1.5px solid black;
+  text-decoration: none;
+}
+
+.CheckoutBtn:hover {
+  background-color: black;
+  color: white;
+  border: 1.5px solid white;
 }
 
 
