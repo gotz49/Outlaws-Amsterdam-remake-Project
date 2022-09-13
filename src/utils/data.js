@@ -1,6 +1,7 @@
 export const data = [
   {
     id: 0,
+    qty: 0,
     name: "Serpent",
     price: "$ 38",
     stock: 34,
@@ -21,6 +22,7 @@ export const data = [
 
   {
     id: 1,
+    qty: 0,
     name: "Vikings",
     price: "$ 38",
     stock: 42,
@@ -41,6 +43,7 @@ export const data = [
 
   {
     id: 2,
+    qty: 0,
     name: "Compass of Life",
     price: "$ 42",
     stock: 27,
@@ -61,6 +64,7 @@ export const data = [
 
   {
     id: 3,
+    qty: 0,
     name: "Arrow",
     price: "$ 42",
     stock: 9,
@@ -81,6 +85,7 @@ export const data = [
 
   {
     id: 4,
+    qty: 0,
     name: "Wired",
     price: "$ 38",
     stock: 14,

@@ -3,11 +3,13 @@ import Spinner from "react-bootstrap/Spinner";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";;
+import "react-toastify/dist/ReactToastify.css";
+import { useCartContext } from "../context/CartContext";
 
 /* ---------------------------- Comienzo del ItemDetail --------------------------- */
 const GetItem = ({ item }) => {
   const [itemCount, setItemCount] = useState(0);
+  const {addProduct} = useCartContext();
 
   const onAdd = (qty) => {
     toast.success("Agregaste " + qty + " items al carrito", {
@@ -22,6 +24,7 @@ const GetItem = ({ item }) => {
     });
 
     setItemCount(qty);
+    addProduct(item, qty);
   };
 
   return (
