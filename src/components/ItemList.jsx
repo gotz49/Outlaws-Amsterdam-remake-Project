@@ -1,18 +1,15 @@
 import Item from "./Item";
-import Spinner from 'react-bootstrap/Spinner';
-
+import Spinner from "react-bootstrap/Spinner";
 
 /* ---------------------------- Comienzo del ItemList --------------------------- */
 const ItemList = ({ items = [] }) => {
   return (
     <>
-      {items.length === 0 
-        ? ( 
-          <div className="loading">
-            <Spinner animation="border" variant="light" />
-          </div>
-        ) 
-      : (
+      {items.length === 0 ? (
+        <div className="loading">
+          <Spinner animation="border" variant="light" />
+        </div>
+      ) : (
         items.map((item) => (
           <Item
             key={item.id}

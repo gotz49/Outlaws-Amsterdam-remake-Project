@@ -8,76 +8,85 @@ import { useCartContext } from "../context/CartContext";
 
 /* ---------------------------- Comienzo del ItemDetail --------------------------- */
 const GetItem = ({ item }) => {
-  const [itemCount, setItemCount] = useState(0);
-  const {addProduct} = useCartContext();
+	const [itemCount, setItemCount] = useState(0);
+	const { addProduct } = useCartContext();
 
-  const onAdd = (qty) => {
-    toast.success("Agregaste " + qty + " items al carrito", {
-      theme: "dark",
-      position: "top-center",
-      autoClose: 2500,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
+	const onAdd = (qty) => {
+		toast.success("Agregaste " + qty + " items al carrito", {
+			theme: "dark",
+			position: "top-center",
+			autoClose: 2500,
+			hideProgressBar: false,
+			closeOnClick: true,
+			pauseOnHover: true,
+			draggable: true,
+			progress: undefined,
+		});
 
-    setItemCount(qty);
-    addProduct(item, qty);
-  };
+		setItemCount(qty);
+		addProduct(item, qty);
+	};
 
-  return (
-    <>
-      {item.name ? (
-        <div className="detailContainer">
-          <div className="detail">
-            <img
-              src={item.image}
-              alt="COMPASS OF LIFE - NECKLACE"
-              className="detailImage"
-            />
-            <div className="content">
-              <h1 className="productTitle">{item.name}</h1>
-              <span className="productDescription">{item.description}</span>
-              <div className="price">
-                <span>{item.price}</span>
-                <span>stock: {item.stock}</span>
-              </div>
-              <section className="AddCart">
-                {itemCount === 0 ? (
-                  <ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd} />
-                ) : (
-                  <Link
-                    to="/Cart"
-                    className="CheckoutBtn"
-                    style={{ textDecoration: "none" }}
-                  >
-                    Checkout
-                  </Link>
-                )}
-              </section>
-            </div>
-          </div>
-          <ToastContainer
-            position="top-center"
-            autoClose={2500}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-          />
-        </div>
-      ) : (
-        <div className="loading">
-          <Spinner animation="border" variant="light" />
-        </div>
-      )}
-    </>
-  );
+	return (
+		<>
+			{item.name ? (
+				<div className="detailContainer">
+					<div className="detail">
+						<img
+							src={item.image}
+							alt="COMPASS OF LIFE - NECKLACE"
+							className="detailImage"
+						/>
+						<div className="content">
+							<h1 className="productTitle">{item.name}</h1>
+							<span className="productDescription">{item.description}</span>
+							<div className="moreDetails">
+								<span>{item.material}</span>
+								<span>{item.guaranty}</span>
+								<span>Weight: {item.weight}</span>
+							</div>
+							<div className="price">
+								<span>{item.price}</span>
+								<span>stock: {item.stock}</span>
+							</div>
+							<section className="AddCart">
+								{itemCount === 0 ? (
+									<ItemCount
+										stock={item.stock}
+										initial={itemCount}
+										onAdd={onAdd}
+									/>
+								) : (
+									<Link
+										to="/Cart"
+										className="CheckoutBtn"
+										style={{ textDecoration: "none" }}
+									>
+										Checkout
+									</Link>
+								)}
+							</section>
+						</div>
+					</div>
+					<ToastContainer
+						position="top-center"
+						autoClose={2500}
+						hideProgressBar={false}
+						newestOnTop={false}
+						closeOnClick
+						rtl={false}
+						pauseOnFocusLoss
+						draggable
+						pauseOnHover
+					/>
+				</div>
+			) : (
+				<div className="loading">
+					<Spinner animation="border" variant="light" />
+				</div>
+			)}
+		</>
+	);
 };
 
 export default GetItem;

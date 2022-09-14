@@ -8,28 +8,26 @@ function MiNavbar() {
   return (
     <Navbar variant="dark" expand="lg" className="miNavbar">
       <Container>
-
         <Navbar.Brand>
-          <Link to='/'>
+          <Link to="/">
             <img
-                src="https://cdn.shopify.com/s/files/1/0519/1516/1756/files/outlaws_logo_tumbnail_125x.png?v=1610347053"
-                width={125}
-                height={51}
-                alt="outlaws amsterdam logo"
-              ></img>
+              src="https://cdn.shopify.com/s/files/1/0519/1516/1756/files/outlaws_logo_tumbnail_125x.png?v=1610347053"
+              width={125}
+              height={51}
+              alt="outlaws amsterdam logo"
+            ></img>
           </Link>
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-
-          <Nav.Link>
+            <Nav.Link>
               <Link
                 to="/category/1"
                 style={{ textDecoration: "none", color: "#bababa" }}
-                >
-                  Rings
+              >
+                Rings
               </Link>
             </Nav.Link>
 
@@ -37,8 +35,8 @@ function MiNavbar() {
               <Link
                 to="/category/2"
                 style={{ textDecoration: "none", color: "#bababa" }}
-                >
-                  Necklaces
+              >
+                Necklaces
               </Link>
             </Nav.Link>
 
@@ -46,11 +44,10 @@ function MiNavbar() {
               <Link
                 to="/category/3"
                 style={{ textDecoration: "none", color: "#bababa" }}
-                >
-                  Bracelets
+              >
+                Bracelets
               </Link>
             </Nav.Link>
-
           </Nav>
         </Navbar.Collapse>
       </Container>

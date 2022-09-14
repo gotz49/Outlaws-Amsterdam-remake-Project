@@ -8,22 +8,22 @@ import Cart from "./components/Cart";
 import CartProvider from "./context/CartContext";
 
 const App = () => {
-	return (
-		<>
-			<BrowserRouter>
-				<CartProvider>			
-					<MiNavbar/>
-					<Routes>
-						<Route path="/" element={<ItemListContainer />}/>
-						<Route path="/category/:id" element={<ItemListContainer/>}/>
-						<Route path="/item/:id" element={<ItemDetailContainer/>}/>
-						<Route path="/cart" element={<Cart/>}/>
-					</Routes>
-					<Footer/>
-				</CartProvider>
-			</BrowserRouter>
-		</>
-	);
+  return (
+    <>
+      <BrowserRouter>
+        <CartProvider>
+          <MiNavbar />
+          <Routes>
+            <Route path="/" element={<ItemListContainer />} />
+            <Route path="/category/:id" element={<ItemListContainer />} />
+            <Route path="/item/:id" element={<ItemDetailContainer />} />
+            <Route path="/cart" element={<Cart />} />
+          </Routes>
+          <Footer />
+        </CartProvider>
+      </BrowserRouter>
+    </>
+  );
 };
 
 export default App;

@@ -5,7 +5,7 @@ const ItemCount = ({ stock = 0, initial = 0, onAdd }) => {
 
   useEffect(() => {
     setCount(initial);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const increment = () => {
@@ -23,17 +23,21 @@ const ItemCount = ({ stock = 0, initial = 0, onAdd }) => {
   return (
     <div>
       <div className="quantity">
-        <button onClick={increment}> + </button>
-        <span>{count}</span>
         <button onClick={decrement}> - </button>
+        <span>{count}</span>
+        <button onClick={increment}> + </button>
       </div>
 
       <div className="buttonContainer">
-        {
-          stock && count
-          ? <button onClick={() => onAdd(count)} className="addBtn">Add to Cart</button>
-          : <button disabled className="addBtnDis">Add to Cart</button>
-        }
+        {stock && count ? (
+          <button onClick={() => onAdd(count)} className="addBtn">
+            Add to Cart
+          </button>
+        ) : (
+          <button disabled className="addBtnDis">
+            Add to Cart
+          </button>
+        )}
       </div>
     </div>
   );
