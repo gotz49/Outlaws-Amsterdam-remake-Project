@@ -9,7 +9,7 @@ import { useCartContext } from "../context/CartContext";
 /* ---------------------------- Comienzo del ItemDetail --------------------------- */
 const GetItem = ({ item }) => {
 	const [itemCount, setItemCount] = useState(0);
-	const { addProduct } = useCartContext();
+	const { addProduct, totalProducts } = useCartContext();
 
 	const onAdd = (qty) => {
 		toast.success("Agregaste " + qty + " items al carrito", {
@@ -25,6 +25,7 @@ const GetItem = ({ item }) => {
 
 		setItemCount(qty);
 		addProduct(item, qty);
+		console.log(totalProducts());
 	};
 
 	return (
@@ -46,7 +47,7 @@ const GetItem = ({ item }) => {
 								<span>Weight: {item.weight}</span>
 							</div>
 							<div className="price">
-								<span>{item.price}</span>
+								<span>USD {item.price}</span>
 								<span>stock: {item.stock}</span>
 							</div>
 							<section className="AddCart">

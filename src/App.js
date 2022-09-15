@@ -4,7 +4,7 @@ import ItemListContainer from "./components/ItemListContainer";
 import MiNavbar from "./components/NavBar";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import Footer from "./components/Footer";
-import Cart from "./components/Cart";
+import Cart from "./components/Cart/Cart";
 import CartProvider from "./context/CartContext";
 
 const App = () => {

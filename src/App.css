@@ -11,7 +11,7 @@
   margin-right: 20px;
 }
 
-.shoppingCart h4 {
+.shoppingCart span {
   display: flex;
   align-items: center;
   justify-content: center;

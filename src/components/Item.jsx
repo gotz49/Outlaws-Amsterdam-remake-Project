@@ -11,7 +11,7 @@ const Item = ({ id, name, image, price, stock, description }) => {
         <Card.Body className="productBody">
           <Card.Title className="productTitle">{name}</Card.Title>
           <div className="price">
-            <span>{price}</span>
+            <span>USD {price}</span>
             {/* <span>stock: {stock}</span> */}
           </div>
           <Link to={`/item/${id}`} style={{ textDecoration: "none" }}>
