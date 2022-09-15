@@ -12,8 +12,6 @@ const CartProvider = ({ children }) => {
 		setCart([...newCart, { ...item, qty: qty + newQty }]);
 	};
 
-	console.log("Cart: ", cart);
-
 	// functino para limpiar todo el carrito
 	const clearCart = () => setCart([]);
 
@@ -31,7 +29,9 @@ const CartProvider = ({ children }) => {
 	};
 	// function para saber cuantos productos hay en el carrito
 	const totalProducts = () => {
-		cart.reduce((accum, currentProduct) => accum + currentProduct.qty, 0);
+    return (
+		  cart.reduce((accum, currentProduct) => accum + currentProduct.qty, 0)
+    )
 	};
 
 	return (
