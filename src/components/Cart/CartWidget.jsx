@@ -8,7 +8,13 @@ const CartWidget = ({ product }) => {
 		<Link to="/Cart" style={{ textDecoration: "none", color: "#bababa" }}>
 			<div className="shoppingCart">
 				<img src={CartIcon} alt="CartIcon" className="CartIcon" />
-				<span>{totalProducts() || ""}</span>
+				<div>
+					{totalProducts() ? (
+						<p className="badge">{totalProducts()}</p>
+					) : (
+						<span></span>
+					)}
+				</div>
 			</div>
 		</Link>
 	);

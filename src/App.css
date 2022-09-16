@@ -1,304 +1,323 @@
 * {
-  box-sizing: border-box !important;
-  margin: 0;
-  padding: 0;
+	box-sizing: border-box !important;
+	margin: 0;
+	padding: 0;
 }
 
 .shoppingCart {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 20px;
+	color:black;
 }
 
-.shoppingCart span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 10px;
+.badge{
+	text-align: center !important;
+	vertical-align: center !important;
+	width: 26px;
+	height: 26px;
+	color: #000000 !important;
+	background-color: #fec400;
+	margin-top: -10px;
+	margin-left: -8px;
+	border-color: #000000;
+	border-color: #fec400;
+	border-radius: 999px !important;
 }
+
 
 .miNavbar {
-  background-color: black;
-  font-family: "Gentium Basic";
-  font-size: 16px;
-  font-weight: 550;
-  letter-spacing: 1.2px;
-  line-height: 19.8px;
-  margin-bottom: 30px;
+	background-color: black;
+	font-family: "Gentium Basic";
+	font-size: 16px;
+	font-weight: 550;
+	letter-spacing: 1.2px;
+	line-height: 19.8px;
+	height: 100px;
+}
+
+.headerWrapper {
+	width: 100%;
+	height: 1px;
+	background-color: #303030;
+	margin-bottom: 2.5%;
 }
 
 .ItemListContainer {
-  min-height: 550px;
+	min-height: 550px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 /* card style */
 .addBtn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  box-sizing: border-box;
-  background-color: #fec400;
-  resize: none;
-  font-family: "Gentium Basic";
-  text-transform: uppercase;
-  border: 1.5px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	box-sizing: border-box;
+	background-color: #fec400;
+	resize: none;
+	font-family: "Gentium Basic";
+	text-transform: uppercase;
+	border: 1.5px solid black;
 }
 
 .addBtn:hover {
-  background-color: black;
-  color: white;
-  border: 1.5px solid white;
+	background-color: black;
+	color: white;
+	border: 1.5px solid white;
 }
 
 .addBtnDis {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  background-color: #4d4d4d;
-  resize: none;
-  font-family: "Gentium Basic";
-  text-transform: uppercase;
-  border: 1.5px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	background-color: #4d4d4d;
+	resize: none;
+	font-family: "Gentium Basic";
+	text-transform: uppercase;
+	border: 1.5px solid black;
 }
 
 .productDescription {
-  color: #bababa;
-  display: inline;
-  font-family: "Gentium Basic";
-  font-size: 16px;
-  line-height: 24.75px;
-  text-align: center;
+	color: #bababa;
+	display: inline;
+	font-family: "Gentium Basic";
+	font-size: 16px;
+	line-height: 24.75px;
+	text-align: center;
 }
 
 .productTitle {
-  color: #bababa;
-  font-family: "Montaga";
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: 1.8px;
-  line-height: 29.7px;
-  text-align: center;
-  text-transform: uppercase;
+	color: #bababa;
+	font-family: "Montaga";
+	font-size: 18px;
+	font-weight: 700;
+	letter-spacing: 1.8px;
+	line-height: 29.7px;
+	text-align: center;
+	text-transform: uppercase;
 }
 
 .card {
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  margin: 20px;
-  text-align: center;
-  transition: all 0.2s;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+	margin: 20px;
+	text-align: center;
+	transition: all 0.2s;
 }
 
 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+	transform: translateY(-6px);
+	box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
 }
 
 .price {
-  margin: 15px;
-  font-family: "Montaga";
-  font-size: 16px;
-  color: #bababa;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	margin: 15px;
+	font-family: "Montaga";
+	font-size: 16px;
+	color: #bababa;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .quantity {
-  display: flex;
-  justify-content: center;
-  text-align: center;
+	display: flex;
+	justify-content: center;
+	text-align: center;
 }
 
 .quantity button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  height: 32px;
-  width: 30px;
-  margin-bottom: 10px;
-  box-sizing: border-box;
-  background-color: #fec400;
-  resize: none;
-  font-family: "Gentium Basic";
-  text-transform: uppercase;
-  border: 1.5px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	height: 32px;
+	width: 30px;
+	margin-bottom: 10px;
+	box-sizing: border-box;
+	background-color: #fec400;
+	resize: none;
+	font-family: "Gentium Basic";
+	text-transform: uppercase;
+	border: 1.5px solid black;
 }
 
 .quantity button:hover {
-  background-color: black;
-  color: white;
-  border: 1.5px solid white;
+	background-color: black;
+	color: white;
+	border: 1.5px solid white;
 }
 
 .quantity span {
-  color: #000000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 32px;
-  width: 30px;
-  background-color: #fec400;
-  border: 1.5px solid black;
+	color: #000000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 32px;
+	width: 30px;
+	background-color: #fec400;
+	border: 1.5px solid black;
 }
 
-.moreDetails{
-  margin: 15px;
-  font-family: "Montaga";
-  font-size: 14px;
-  color: #bababa;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.moreDetails {
+	margin: 15px;
+	font-family: "Montaga";
+	font-size: 14px;
+	color: #bababa;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
-.moreDetails span{
-  margin: 8px;
+.moreDetails span {
+	margin: 8px;
 }
 
 .buttonContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 10px;
 }
 
 .loading {
-  min-height: 550px;
-  color: #fec400;
-  font-family: Gentium Basic;
-  margin: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	min-height: 550px;
+	color: #fec400;
+	font-family: Gentium Basic;
+	margin: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .detailContainer {
-  width: 98%;
-  margin: auto;
+	width: 98%;
+	margin: auto;
 }
 
 @media screen and (min-width: 768px) {
-  .detailContainer {
-    width: 70%;
-  }
+	.detailContainer {
+		width: 70%;
+	}
 }
 
 .detail {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .detailImage {
-  width: 100%;
+	width: 100%;
 }
 
 .content {
-  width: 100%;
+	width: 100%;
 }
 
 @media screen and (min-width: 768px) {
-  .detailImage {
-    width: 50%;
-  }
-  .content {
-    padding-left: 3rem;
-    width: 50%;
-  }
+	.detailImage {
+		width: 50%;
+	}
+	.content {
+		padding-left: 3rem;
+		width: 50%;
+	}
 }
 
 .CheckoutBtn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  height: 40px;
-  width: auto;
-  margin-bottom: 10px;
-  box-sizing: border-box;
-  color: #000000;
-  background-color: #fec400;
-  resize: none;
-  font-family: "Gentium Basic";
-  text-transform: uppercase;
-  border: 1.5px solid black;
-  text-decoration: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	height: 40px;
+	width: auto;
+	margin-bottom: 10px;
+	box-sizing: border-box;
+	color: #000000;
+	background-color: #fec400;
+	resize: none;
+	font-family: "Gentium Basic";
+	text-transform: uppercase;
+	border: 1.5px solid black;
+	text-decoration: none;
 }
 
 .CheckoutBtn:hover {
-  background-color: black;
-  color: white;
-  border: 1.5px solid white;
+	background-color: black;
+	color: white;
+	border: 1.5px solid white;
 }
 
 /* Footer */
 .footer {
-  width: 100%;
-  height: 15%;
-  max-height: 196px;
-  bottom: 0;
+	width: 100%;
+	height: 15%;
+	max-height: 196px;
+	bottom: 0;
 }
 .footer .linea {
-  width: 100%;
-  height: 1px;
-  background-color: #303030;
-  margin-bottom: 25px;
-  margin-top: 50px;
+	width: 100%;
+	height: 1px;
+	background-color: #303030;
+	margin-bottom: 25px;
+	margin-top: 50px;
 }
 .footer .volver {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-  font-family: "Gentium Basic", serif;
-  font-size: 20px;
-  color: rgba(240, 248, 255, 0.842);
-  font-weight: 500;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	text-decoration: none;
+	font-family: "Gentium Basic", serif;
+	font-size: 20px;
+	color: rgba(240, 248, 255, 0.842);
+	font-weight: 500;
 }
 .footer .volver:hover {
-  color: rgba(138, 138, 138, 0.842);
-  transition: 0.25s;
+	color: rgba(138, 138, 138, 0.842);
+	transition: 0.25s;
 }
 .footer .redes h3 {
-  margin: 10px;
-  text-align: center;
-  font-family: "Gentium Basic", serif;
-  font-size: 15px;
-  color: rgba(240, 248, 255, 0.842);
-  font-weight: 400;
+	margin: 10px;
+	text-align: center;
+	font-family: "Gentium Basic", serif;
+	font-size: 15px;
+	color: rgba(240, 248, 255, 0.842);
+	font-weight: 400;
 }
 .footer .redes nav ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
 }
 .footer .redes nav ul li {
-  list-style: none;
-  margin-left: 15px;
-  margin-right: 15px;
+	list-style: none;
+	margin-left: 15px;
+	margin-right: 15px;
 }
 .derechos p {
-  text-align: center;
-  font-family: "Gentium Basic", serif;
-  font-size: 14px;
-  color: rgba(240, 248, 255, 0.842);
-  font-weight: 300;
-  margin: 5px;
+	text-align: center;
+	font-family: "Gentium Basic", serif;
+	font-size: 14px;
+	color: rgba(240, 248, 255, 0.842);
+	font-weight: 300;
+	margin: 5px;
 }
 
 /* end of footer */

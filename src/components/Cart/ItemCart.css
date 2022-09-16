@@ -1,0 +1,323 @@
+.CartPageContainer {
+	min-height: 550px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+/* Empty section */
+.Empty {
+	min-height: 550px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.Empty h1 {
+	color: #bababa;
+	font-family: Montaga;
+	font-size: 13px;
+	font-weight: 700;
+	letter-spacing: 1.3px;
+	line-height: 21.45px;
+	margin: 0 0 15px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.Empty p {
+	color: #bababa;
+	font-family: Gentium Basic;
+	font-size: 15px;
+	line-height: 24.75px;
+	margin: 0px 0px 15px;
+	text-align: center;
+	font-weight: lighter;
+}
+
+.Empty button {
+	display: inline-block;
+	height: 45px;
+	width: 200px;
+	padding: 14px 28px;
+	margin: 30px 0px 0px;
+	background-color: #fec400;
+	font-size: 12px;
+	font-weight: 700;
+	font-family: "Gentium Basic";
+	text-transform: uppercase;
+	text-align: center;
+	border: 1.5px solid black;
+}
+
+.Empty button:hover {
+	background-color: black;
+	color: white;
+	border: 1.5px solid white;
+}
+
+/* Empty section end*/
+
+/* Cart with products */
+
+.ItemCart {
+	width: 85%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.CartItem {
+	margin-bottom: 15px;
+}
+
+.CartHeader h1 {
+	color: #bababa;
+	font-family: Montaga;
+	font-size: 20px;
+	letter-spacing: 2px;
+	line-height: 33px;
+	margin: 0px 0px 16.6px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.CartHeader p {
+	color: #bababa;
+	font-family: Gentium Basic;
+	font-size: 15px;
+	line-height: 24.75px;
+	text-align: center;
+	font-weight: lighter;
+}
+
+.CartItemListHeaders {
+	display: table;
+	width: 1000px;
+}
+
+.CartWrapper {
+	width: 1000px;
+	height: 1px;
+	background-color: #303030;
+	margin-bottom: 10px;
+}
+.TableProd {
+	width: 120px;
+	height: 29px;
+	color: #bababa;
+	display: table-cell;
+	font-size: 11px;
+	letter-spacing: 1.1px;
+	font-family: Gentium Basic;
+	text-transform: uppercase;
+}
+.TableHeadItem {
+	width: 425px;
+	height: 29px;
+	display: table-cell;
+}
+.TableQty {
+	width: 329px;
+	height: 29px;
+	color: #bababa;
+	display: table-cell;
+	font-size: 11px;
+	letter-spacing: 1.1px;
+	font-family: Gentium Basic;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.TableSubt {
+	width: 134px;
+	height: 29px;
+	color: #bababa;
+	display: table-cell;
+	font-family: Gentium Basic;
+	font-size: 11px;
+	letter-spacing: 1.1px;
+	text-transform: uppercase;
+	text-align: right;
+}
+.CartItemInfo {
+	width: 425px;
+	height: 120px;
+	color: #bababa;
+	display: table-cell;
+	font-size: 15px;
+	line-height: 24.75px;
+	vertical-align: middle;
+	padding: 0px 0px 0px 25px;
+}
+.CartItemInfo h2 {
+	width: 400px;
+	height: 22px;
+	color: #bababa;
+	font-family: Montaga;
+	font-size: 13px;
+	letter-spacing: 1.3px;
+	line-height: 21.45px;
+	margin: 0px 0px 5.85px;
+	text-transform: uppercase;
+}
+.CartItemPriceList {
+	width: 400px;
+	height: 20px;
+	color: #bababa;
+	font-size: 12px;
+	letter-spacing: 1.2px;
+	line-height: 19.8px;
+	font-family: Gentium Basic;
+	text-transform: uppercase;
+}
+.Money {
+	color: #bababa;
+	display: inline;
+	font-size: 12px;
+	letter-spacing: 1.2px;
+	line-height: 19.8px;
+	font-family: Gentium Basic;
+	text-transform: uppercase;
+}
+.CartItemQty {
+	width: 321px;
+	height: 120px;
+	align-items: center;
+	color: #bababa;
+	display: table-cell;
+	flex-wrap: wrap;
+	font-size: 15px;
+	justify-content: space-between;
+	letter-spacing: 1.5px;
+	line-height: 24.75px;
+	margin: 20px 0px 0px;
+	text-transform: uppercase;
+	font-family: Gentium Basic;
+	vertical-align: middle;
+}
+.CartItemQty div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	letter-spacing: 1.5px;
+	line-height: 24.75px;
+	margin: 0px 0px 6px;
+}
+.CartItemQty span {
+	color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 10px;
+	height: 32px;
+	width: auto;
+	background-color: #fec400;
+	font-family: "Gentium Basic";
+	text-transform: uppercase;
+	border: 1.5px solid black;
+}
+.CartItemQty button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 10px;
+	height: 32px;
+	width: auto;
+	background-color: #fec400;
+	font-family: "Gentium Basic";
+	text-transform: uppercase;
+	border: 1.5px solid black;
+}
+.CartItemQty button:hover {
+	background-color: black;
+	color: white;
+	border: 1.5px solid white;
+}
+.CartItemQty .remove {
+	text-align: center;
+	padding: 10px;
+	height: 32px;
+	width: auto;
+	background-color: #fec400;
+	font-family: "Gentium Basic";
+	text-transform: uppercase;
+	border: 1.5px solid black;
+}
+.CartItemQty .remove:hover {
+	background-color: black;
+	color: white;
+	border: 1.5px solid white;
+}
+.CartItemSubt {
+	color: #bababa;
+	display: table-cell;
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 1.2px;
+	line-height: 19.8px;
+	text-transform: uppercase;
+	text-align: center;
+}
+.Subtotal {
+	width: 132px;
+	height: 120px;
+	color: #bababa;
+	display: table-cell;
+	font-size: 12px;
+	letter-spacing: 1.2px;
+	text-transform: uppercase;
+	font-family: Gentium Basic;
+	vertical-align: middle;
+	text-align: right;
+}
+.Subtotal p {
+	text-align: center;
+}
+.CartItemImg {
+	height: 120px;
+	width: 120px;
+	display: flex;
+	flex-direction: row;
+	float: left;
+}
+
+.TotalCart {
+	width: 1000px;
+	height: 20px;
+	color: #bababa;
+	font-family: Gentium Basic;
+	font-size: 12px;
+	letter-spacing: 1.2px;
+	line-height: 19.8px;
+	margin: 0px 0px 12px;
+	text-align: right;
+	text-transform: uppercase;
+}
+
+.checkoutCart {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	height: 45px;
+	width: 100%;
+	margin-bottom: 10px;
+	box-sizing: border-box;
+	background-color: #fec400;
+	font-size: 13px;
+	font-family: "Gentium Basic";
+	text-transform: uppercase;
+	border: 1.5px solid black;
+}
+
+.checkoutCart:hover {
+	background-color: black;
+	color: white;
+	border: 1.5px solid white;
+}
