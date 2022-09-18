@@ -4,7 +4,7 @@ export const data = [
     qty: 0,
     name: "Serpent",
     price: 38,
-    stock: 34,
+    stock: 7,
     material: "316L Stainless steel",
     guaranty: "Guaranteed to last a lifetime",
     weight: "5g",

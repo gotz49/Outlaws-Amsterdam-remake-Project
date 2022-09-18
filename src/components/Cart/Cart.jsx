@@ -5,15 +5,15 @@ import ItemCart from "./ItemCart";
 import "./ItemCart.css";
 
 export default function Cart() {
-	const { cart, totalPrice } = useCartContext();
+	const { cartItems, TotalPrice } = useCartContext();
 
 	//return temprano para carrito vacio
-	if (cart.length === 0) {
+	if (cartItems.length === 0) {
 		return (
 			<section className="CartPageContainer">
 				<div className="Empty">
 					<h1>YOUR CART IS EMPTY</h1>
-					<p>Spend USD50 more and get free shipping!</p>
+					<p>Spend USD100 more and get free shipping!</p>
 					<Link to="/" style={{ textDecoration: "none" }}>
 						<button>shop our products</button>
 					</Link>
@@ -28,8 +28,8 @@ export default function Cart() {
 				<div className="ItemCart">
 					<aside className="CartHeader">
 						<h1>CART</h1>
-						{totalPrice() < 50 ? (
-							<p>Spend USD {50 - totalPrice()} more and get free shipping!</p>
+						{TotalPrice < 100 ? (
+							<p>Spend USD {100 - TotalPrice} more and get free shipping!</p>
 						) : (
 							<p>Free Shipping!</p>
 						)}
@@ -42,11 +42,11 @@ export default function Cart() {
 					</article>
 					<div className="CartWrapper"></div>
 					<div>
-						{cart.map((product) => (
+						{cartItems.map((product) => (
 							<ItemCart key={product.id} product={product} />
 						))}
 						<div className="CartWrapper"></div>
-						<p className="TotalCart">TOTAL: {totalPrice()}</p>
+						<p className="TotalCart">TOTAL: USD {TotalPrice}</p>
 						<button className="checkoutCart">CHECKOUT</button>
 					</div>
 				</div>

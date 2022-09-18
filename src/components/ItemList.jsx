@@ -7,7 +7,7 @@ const ItemList = ({ items = [] }) => {
     <>
       {items.length === 0 ? (
         <div className="loading">
-          <Spinner animation="border" variant="light" />
+          <Spinner animation="border" variant="warning" />
         </div>
       ) : (
         items.map((item) => (
