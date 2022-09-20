@@ -1,4 +1,6 @@
-export const data = [
+// no se exporta ya que no se utiliza, se utiliza la base de datos desde Firebase
+
+const data = [
   {
     id: 0,
     qty: 0,
