@@ -76,6 +76,10 @@ const CartProvider = ({ children }) => {
 		setCartItems(cartItems.filter((item) => item.id !== itemID));
 	};
 
+	const DeleteCart = () => {
+		setCartItems([]);
+	};
+
 	return (
 		<CartContext.Provider
 			value={{
@@ -85,6 +89,7 @@ const CartProvider = ({ children }) => {
 				TotalProductsInCart,
 				TotalPrice,
 				RemoveItem,
+				DeleteCart,
 			}}
 		>
 			{children}

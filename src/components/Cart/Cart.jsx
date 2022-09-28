@@ -1,11 +1,62 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { useCartContext } from "../../context/CartContext";
+import {
+	doc,
+	serverTimestamp,
+	collection,
+	setDoc,
+	updateDoc,
+	increment,
+} from "firebase/firestore";
+import { db } from "../../utils/firebaseConfig";
 import ItemCart from "./ItemCart";
 import "./ItemCart.css";
 
 export default function Cart() {
-	const { cartItems, TotalPrice } = useCartContext();
+	const { cartItems, TotalPrice, DeleteCart } = useCartContext();
+
+	// // CreateOrder function
+	const CreateOrder = () => {
+		let itemsForDB = cartItems.map((item) => ({
+			id: item.id,
+			title: item.name,
+			price: item.price,
+			qty: item.qty,
+		}));
+
+		let order = {
+			buyer: {
+				name: "Alex Turner",
+				email: "yellamosalohcin@email.com",
+				phone: "50 1231 1234 1234",
+			},
+			date: serverTimestamp(),
+			items: itemsForDB,
+			total: TotalPrice,
+		};
+
+		// CreateOrder in Firestore
+		const CreateOrderInFirestore = async () => {
+			const newOrderRef = doc(collection(db, "orders"));
+			await setDoc(newOrderRef, order);
+			return newOrderRef;
+		};
+
+		CreateOrderInFirestore()
+			.then((res) => {
+				alert("Your order has been created! " + res.id);
+				//stock decrement
+				cartItems.forEach(async (item) => {
+					const itemRef = doc(db, "Products", item.id);
+					await updateDoc(itemRef, {
+						stock: increment(-item.qty),
+					});
+				});
+				DeleteCart();
+			})
+			.catch((err) => console.log(err));
+
+	};
 
 	//return temprano para carrito vacio
 	if (cartItems.length === 0) {
@@ -47,7 +98,9 @@ export default function Cart() {
 						))}
 						<div className="CartWrapper"></div>
 						<p className="TotalCart">TOTAL: USD {TotalPrice}</p>
-						<button className="checkoutCart">CHECKOUT</button>
+						<button className="checkoutCart" onClick={CreateOrder}>
+							create purchase order
+						</button>
 					</div>
 				</div>
 			</section>
