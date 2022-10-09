@@ -11,51 +11,137 @@ import {
 import { db } from "../../utils/firebaseConfig";
 import ItemCart from "./ItemCart";
 import "./ItemCart.css";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
 
 export default function Cart() {
 	const { cartItems, TotalPrice, DeleteCart } = useCartContext();
+	const {
+		register,
+		handleSubmit,
+		getValues,
+		formState: { errors, isValid },
+	} = useForm({
+		mode: "onChange",
+		defaultValues: {
+			name: "",
+			email: "",
+			telephone: "",
+		},
+	});
+	const [buyerData, setBuyerData] = useState({
+		name: "",
+		email: "",
+		telephone: "",
+	});
 
-	// // CreateOrder function
+	// CreateOrder function
 	const CreateOrder = () => {
-		let itemsForDB = cartItems.map((item) => ({
-			id: item.id,
-			title: item.name,
-			price: item.price,
-			qty: item.qty,
-		}));
+		if (isValid) {
+			let itemsForDB = cartItems.map((item) => ({
+				id: item.id,
+				title: item.name,
+				price: item.price,
+				qty: item.qty,
+			}));
 
-		let order = {
-			buyer: {
-				name: "Alex Turner",
-				email: "yellamosalohcin@email.com",
-				phone: "50 1231 1234 1234",
-			},
-			date: serverTimestamp(),
-			items: itemsForDB,
-			total: TotalPrice,
-		};
-
-		// CreateOrder in Firestore
-		const CreateOrderInFirestore = async () => {
-			const newOrderRef = doc(collection(db, "orders"));
-			await setDoc(newOrderRef, order);
-			return newOrderRef;
-		};
-
-		CreateOrderInFirestore()
-			.then((res) => {
-				alert("Your order has been created! " + res.id);
-				//stock decrement
-				cartItems.forEach(async (item) => {
-					const itemRef = doc(db, "Products", item.id);
-					await updateDoc(itemRef, {
-						stock: increment(-item.qty),
+			let order = {
+				buyer: {
+					name: buyerData.name,
+					email: buyerData.email,
+					phone: buyerData.telephone,
+				},
+				date: serverTimestamp(),
+				items: itemsForDB,
+				total: TotalPrice,
+			};
+			CreateOrderInFirestore(order)
+				.then((res) => {
+					alert("Your order has been created! " + res.id);
+					//stock decrement
+					cartItems.forEach(async (item) => {
+						const itemRef = doc(db, "Products", item.id);
+						await updateDoc(itemRef, {
+							stock: increment(-item.qty),
+						});
 					});
-				});
-				DeleteCart();
-			})
-			.catch((err) => console.log(err));
+					DeleteCart();
+				})
+				.catch((err) => console.log(err));
+		} else {
+			alert("please, complete the form before create order");
+		}
+	};
 
+	// CreateOrder in Firestore
+	const CreateOrderInFirestore = async (order) => {
+		const newOrderRef = doc(collection(db, "orders"));
+		await setDoc(newOrderRef, order);
+		return newOrderRef;
+	};
+
+	// Contact Form
+
+	//valid form data
+	const ValidForm = () => {
+		isValid ? (
+			alert("correct contact information, continue with your purchase") 
+		) : (
+			<p>the form data is invalid</p>
+		);
+	};
+
+	const onSubmit = (data) => {
+        const formValues = getValues();
+		setBuyerData(formValues);
+		console.log(buyerData);
+
+	};
+
+	const ContactForm = () => {
+		return (
+			<form onSubmit={handleSubmit(onSubmit)}>
+				<label>Full Name</label>
+				<input
+					type="text"
+					name="name"
+					className="FullName"
+					placeholder="First and Last"
+					{...register("name", {
+						required: true,
+					})}
+				/>
+				{errors.name?.type === "required" && <p>Name is required</p>}
+
+				<label>Email Address</label>
+				<input
+					id="email"
+					type="email"
+					name="email"
+					placeholder="example@email.com"
+					{...register("email", {
+						required: true,
+					})}
+				/>
+				{errors.email?.type === "required" && <p>Email is required</p>}
+
+				<label>Telephone Number </label>
+				<input
+					type="telephone"
+					name="telephone"
+					id="telephone"
+					placeholder="095-555-555"
+					{...register("telephone", {
+						required: true,
+					})}
+				/>
+				{errors.telephone?.type === "required" && <p>Telephone is required</p>}
+
+				<button type="submit" className="checkoutCart" onClick={ValidForm}>
+					check correct data
+				</button>
+			</form>
+		);
 	};
 
 	//return temprano para carrito vacio
@@ -98,9 +184,16 @@ export default function Cart() {
 						))}
 						<div className="CartWrapper"></div>
 						<p className="TotalCart">TOTAL: USD {TotalPrice}</p>
-						<button className="checkoutCart" onClick={CreateOrder}>
+						<div className="CartWrapper"></div>
+						<button
+							type="submit"
+							className="checkoutCart"
+							onClick={CreateOrder}
+						>
 							create purchase order
 						</button>
+						{/* FormSpree */}
+						<ContactForm />
 					</div>
 				</div>
 			</section>
