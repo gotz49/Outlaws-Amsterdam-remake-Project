@@ -292,16 +292,44 @@
 }
 
 .TotalCart {
-	width: 1000px;
-	height: 20px;
+	width: 95%;
+	height: 35px;
 	color: #bababa;
 	font-family: Gentium Basic;
-	font-size: 12px;
-	letter-spacing: 1.2px;
-	line-height: 19.8px;
-	margin: 0px 0px 12px;
+	font-size: 16px;
 	text-align: right;
 	text-transform: uppercase;
+	vertical-align: middle;
+	padding: 6px;
+}
+
+.TotalContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 35px;
+	width: 1000px;
+	margin: 12px 0px 12px;
+}
+
+.RemoveAll {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	height: 35px;
+	width: 15%;
+	box-sizing: border-box;
+	background-color: #fec400;
+	font-size: 14px;
+	font-family: "Gentium Basic";
+	text-transform: uppercase;
+	border: 1.5px solid black;
+}
+.RemoveAll:hover {
+	background-color: black;
+	color: white;
+	border: 1.5px solid white;
 }
 
 .checkoutCart {
@@ -309,14 +337,14 @@
 	justify-content: center;
 	align-items: center;
 	padding: 10px;
-	height: 45px;
+	height: 60px;
 	width: 100%;
-	margin-bottom: 10px;
+	margin-top: 30px;
 	box-sizing: border-box;
 	background-color: #fec400;
-	font-size: 13px;
+	font-size: 16px;
 	font-family: "Gentium Basic";
-	text-transform: uppercase;
+	text-decoration: wavy;
 	border: 1.5px solid black;
 }
 

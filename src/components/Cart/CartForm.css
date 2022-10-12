@@ -1,0 +1,68 @@
+.CartForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 35px;
+}
+
+.CartForm div {
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.CartForm label {
+    color: #bababa;
+	font-family: "Montaga", serif;
+    font-size: 15px;
+	text-align: center;
+    text-transform: uppercase;
+}
+
+.CartForm input {
+	height: 45px;
+    width: 85%;
+	padding: 10px;
+	margin-bottom: 10px;
+	box-sizing: border-box;
+	background-color: black;
+	resize: none;
+	font-family: "Montaga", serif;
+	border: 0.3px solid rgba(240, 248, 255, 0.555);
+}
+
+.CartForm p{
+    color: #bababa;
+	font-family: "Montaga", serif;
+    font-size: 15px;
+	text-align: center;
+    text-decoration: solid;
+    margin-top: -4px;
+}
+
+.CartForm button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	height: 45px;
+	width: 75%;
+    margin-top: 10px;
+	margin-bottom: 30px;
+	box-sizing: border-box;
+	background-color: #fec400;
+	font-size: 13px;
+	font-family: "Gentium Basic";
+	text-transform: uppercase;
+	border: 1.5px solid black;
+}
+
+.CartForm button:hover {
+	background-color: black;
+	color: white;
+	border: 1.5px solid white;
+}
+

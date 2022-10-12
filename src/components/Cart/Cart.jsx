@@ -10,6 +10,7 @@ import {
 } from "firebase/firestore";
 import { db } from "../../utils/firebaseConfig";
 import ItemCart from "./ItemCart";
+import "./CartForm.css"
 import "./ItemCart.css";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
@@ -87,7 +88,7 @@ export default function Cart() {
 		isValid ? (
 			alert("correct contact information, continue with your purchase") 
 		) : (
-			<p>the form data is invalid</p>
+			alert("the form data is invalid") 
 		);
 	};
 
@@ -100,44 +101,50 @@ export default function Cart() {
 
 	const ContactForm = () => {
 		return (
-			<form onSubmit={handleSubmit(onSubmit)}>
-				<label>Full Name</label>
-				<input
-					type="text"
-					name="name"
-					className="FullName"
-					placeholder="First and Last"
-					{...register("name", {
-						required: true,
-					})}
-				/>
+			<form onSubmit={handleSubmit(onSubmit)} className="CartForm">
+				<div>
+					<label>Name</label>
+					<input
+						type="text"
+						name="name"
+						className="FullName"
+						placeholder="First and Last"
+						{...register("name", {
+							required: true,
+						})}
+					/>
+				</div>
 				{errors.name?.type === "required" && <p>Name is required</p>}
 
-				<label>Email Address</label>
-				<input
-					id="email"
-					type="email"
-					name="email"
-					placeholder="example@email.com"
-					{...register("email", {
-						required: true,
-					})}
-				/>
+				<div>
+					<label>Email</label>
+					<input
+						id="email"
+						type="email"
+						name="email"
+						placeholder="example@email.com"
+						{...register("email", {
+							required: true,
+						})}
+					/>
+				</div>
 				{errors.email?.type === "required" && <p>Email is required</p>}
 
-				<label>Telephone Number </label>
-				<input
-					type="telephone"
-					name="telephone"
-					id="telephone"
-					placeholder="095-555-555"
-					{...register("telephone", {
-						required: true,
-					})}
-				/>
+				<div>
+					<label>Telephone</label>
+					<input
+						type="telephone"
+						name="telephone"
+						id="telephone"
+						placeholder="095-555-555"
+						{...register("telephone", {
+							required: true,
+						})}
+					/>
+				</div>
 				{errors.telephone?.type === "required" && <p>Telephone is required</p>}
 
-				<button type="submit" className="checkoutCart" onClick={ValidForm}>
+				<button type="submit" onClick={ValidForm}>
 					check correct data
 				</button>
 			</form>
@@ -183,17 +190,22 @@ export default function Cart() {
 							<ItemCart key={product.id} product={product} />
 						))}
 						<div className="CartWrapper"></div>
-						<p className="TotalCart">TOTAL: USD {TotalPrice}</p>
+						<div className="TotalContainer">
+							<button className="RemoveAll" onClick={DeleteCart}>
+								REMOVE ALL
+							</button>
+							<span className="TotalCart">TOTAL: USD {TotalPrice}</span>
+						</div>
+						<div className="CartWrapper"></div>
+						<ContactForm />
 						<div className="CartWrapper"></div>
 						<button
 							type="submit"
 							className="checkoutCart"
 							onClick={CreateOrder}
 						>
-							create purchase order
+							SEND ORDER
 						</button>
-						{/* FormSpree */}
-						<ContactForm />
 					</div>
 				</div>
 			</section>
