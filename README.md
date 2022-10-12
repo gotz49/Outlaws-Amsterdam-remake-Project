@@ -1,31 +1,61 @@
-# Outlaws Amsterdam Remake Project
+# Outlaws Amsterdam remake Project
 by Santiago Díaz
 
-products, images and style by Outlaws Amsterdam
+Outlaws Amsterdam remake es mi primer proyecto realizado en ReactJS, consta de un simulacro de e-commerce, hecho en la escuela CoderHouse.
+#
+ Link de Deploy : [Outlaws Amsterdam remake Project](https://outlawsamsterdamremakeproject.netlify.app/)
+#
+ Link a la Demo: [Demo-Outlaws Amsterdam remake Project](https://youtu.be/0DTc5hMCqBw)
+#
+## Instalación
 
-project build in ReactJS
+Utilice el gestor de paquetes [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) para instalar las dependencias.
+
+>Inicializar el proyecto via npm
+
+```bash
+
+    git clone
+    cd the-clone
+    npm install 
+    npm start 
+
+```
 
 
-dependencies:
+## Lista de dependencias
+```bash
+react 18.2.0
+bootstrap 5.2.0
+firebase 9.10.0
+react-bootstrap 2.5.0
+react-dom 18.2.0
+react-hook-form 7.37.0
+react-router-dom 6.3.0
+react-scripts 5.0.1
+react-toastify 9.0.8
+```
 
--"@testing-library/jest-dom": "^5.16.5"
+##  Tecnologías utilizadas
+```
+HTML para el maquetado y la estructuración del sitio.
 
--"@testing-library/react": "^13.3.0"
+CSS para la implementación de estilos en el mismo.
 
--"@testing-library/user-event": "^13.5.0"
+Bootstrap para componentes como cards de productos y barra de navegación.
 
--"bootstrap": "^5.2.0"
+Javascript y ReactJs para la creación de componentes e interactividad con el usuario.
 
--"react": "^18.2.0"
+React hooks para el mantenimiento de estados locales y globales.
 
--"react-bootstrap": "^2.5.0"
+LocalStorage para el almacenamiento del carrito.
 
--"react-dom": "^18.2.0"
+React-router-DOM para el manejo de rutas dentro de la SPA.
 
--"react-router-dom": "^6.3.0"
+Firestore Database (Firebase) para el almacenamiento de productos en base de datos.
 
--"react-scripts": "^5.0.1"
-
--"react-toastify": "^9.0.8"
-
--"web-vitals": "^2.1.4"
+```
+#
+#
+# Developed by
+## [Santiago Diaz](https://github.com/gotz49)
